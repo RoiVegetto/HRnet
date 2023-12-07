@@ -1,10 +1,13 @@
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
+import TableComponent from '../../Components/Table/Table';
 
 function EmployeeList() {
   return (
-    <div>
-      {/* Contenu de votre composant */}
-    </div>
+    <>
+      <TableComponent />
+      <Footer />
+    </>
   );
 }
 

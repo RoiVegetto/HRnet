@@ -1,10 +1,13 @@
 import React from 'react';
+import HeaderIndex from '../../Components/HeaderIndex/HeaderIndex';
+import Form from '../../Components/Form/Form';
 
 function Index() {
   return (
-    <div>
-      {/* Contenu de votre composant */}
-    </div>
+    <>
+        <HeaderIndex />
+        <Form />
+    </>
   );
 }
 
