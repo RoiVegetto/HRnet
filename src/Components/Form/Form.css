@@ -1,3 +1,74 @@
 .react-datepicker .react-datepicker__day:hover {
     background-color: orange !important;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #93ad18;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #6c8213;
+}
+
+label {
+    color:#6c8213;
+}
+
+input {
+    border: 2px solid #6c8213; 
+    border-radius: 15px; 
+    outline: none;
+    padding: 1px 5px;
+}
+
+input:focus {
+    border-color: #6c8213; 
+    box-shadow: 0 0 10px #6c8213; 
+}
+
+select {
+    border: 2px solid #6c8213;
+    border-radius: 15px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 1px 10px;
+    background-color: white;
+    width: 183px;
+}
+
+select:focus {
+    border-color: #6c8213;
+    box-shadow: 0 0 10px #6c8213;
+}
+
+select option {
+    padding: 5px;
+    background-color: white;
+}
+
+
+select option:hover {
+    background-color: #e8e8e8;
+}
+
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background: #6c8213;
+    border-radius: 5px; 
+}
+
+button {
+    margin: 0 0 15px 0;
+    background: #6c8213;
+    border-color: #6c8213;
+    border-radius: 5px; 
+}

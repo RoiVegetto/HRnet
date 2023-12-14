@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Form.css';
 import { EmployeeContext } from '../../Data/EmployeeContext';
+import Modal from '../Modal/Modal';
 
 function Form() {
     const { addEmployee } = useContext(EmployeeContext);
@@ -27,24 +28,6 @@ function Form() {
             });
         }
     };
-    
-    const Modal = ({ show, onClose }) => {
-        if (!show) {
-            return null;
-        }
-        return (
-            <div className="modal">
-                <div className="modal-content">
-                    <h2>Employee Created Successfully</h2>
-                    <button onClick={onClose}>Close</button>
-                </div>
-            </div>
-        );
-    };
-    
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -63,6 +46,10 @@ function Form() {
             ...formData,
             [e.target.name]: e.target.value
         });
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
     };
 
     return (
@@ -100,7 +87,7 @@ function Form() {
             </label>
             <br/>
 
-            <p>Address</p>
+            <h2>Address</h2>
             <label htmlFor="street">
                 Street<br/>
                 <input type="text" id="street" name="street" value={formData.street} onChange={handleInputChange} />

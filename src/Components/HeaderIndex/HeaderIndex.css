@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #93ad18;
+    max-height: 180px;
+}
+
+.logoTitle {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 120px;
+    width: 120px;
+}
+
+header h1 {
+    width: 200px;
+
+}
+
+header a {
+    width: 200px;
+    color: #93ad18;
+}

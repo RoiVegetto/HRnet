@@ -5,7 +5,7 @@ import Form from '../../Components/Form/Form';
 function Index() {
   return (
     <>
-        <HeaderIndex />
+        <HeaderIndex logo={'Images/logoHRnet.png'} />
         <Form />
     </>
   );

@@ -1,0 +1,9 @@
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.headerList, .footerList {
+    display: flex;
+    justify-content: space-around;
+}
