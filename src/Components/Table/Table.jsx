@@ -87,15 +87,17 @@ const TableComponent = () => {
         <>
             <h2>Current Employees</h2>
             <div className='headerList'>
-                <input
-                    placeholder={"Number of list"}
-                    type="number"
-                    defaultValue={pageSize}
-                    onChange={e => {
-                        const pageSize = e.target.value ? Number(e.target.value) : 10;
-                        setPageSize(pageSize);
-                    }}
-                />
+            <input
+                placeholder="Number of list"
+                type="number"
+                defaultValue={pageSize}
+                min={1}
+                onChange={e => {
+                    let pageSize = e.target.value ? Number(e.target.value) : 10;
+                    pageSize = Math.max(pageSize, 1); // Cette ligne sert a mettre 1 même si l'utilisateur renseigne une valeur 0 ou moins
+                    setPageSize(pageSize);
+                }}
+            />
             <input
                 value={filterInput}
                 onChange={handleFilterChange}
