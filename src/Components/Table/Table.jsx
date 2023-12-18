@@ -11,26 +11,12 @@ const TableComponent = () => {
         console.log("TableComponent updated with employees:", employees);
     }, [employees]);
 
-    const formatDate = (date) => {
-        if (!date) return '';
-        const d = date instanceof Date ? date : new Date(date);
-        return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
-    };
-
     const columns = useMemo(() => [
         { Header: 'First Name', accessor: 'firstName' },
         { Header: 'Last Name', accessor: 'lastName' },
-        {
-            Header: 'Start Date',
-            accessor: 'startDate',
-            Cell: ({ value }) => formatDate(value)
-        },
+        { Header: 'Start Date', accessor: 'startDate' },
         { Header: 'Department', accessor: 'department' },
-        {
-            Header: 'Date of Birth',
-            accessor: 'dateOfBirth',
-            Cell: ({ value }) => formatDate(value)
-        },
+        { Header: 'Date of Birth', accessor: 'dateOfBirth' },
         { Header: 'Street', accessor: 'street' },
         { Header: 'City', accessor: 'city' },
         { Header: 'State', accessor: 'state' },
@@ -39,15 +25,15 @@ const TableComponent = () => {
 
     const globalFilter = (rows, columns, filterValue) => {
         if (!filterValue) return rows;
-    
+
         const lowercaseFilterValue = filterValue.toLowerCase();
-    
+
         return rows.filter(row => {
             return row.cells.some(cell => {
                 return String(cell.value).toLowerCase().includes(lowercaseFilterValue);
             });
         });
-    };
+    };    
 
     const {
         getTableProps,
