@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Form.css';
 import { EmployeeContext } from '../../Data/EmployeeContext';
-import Modal from '../Modal/Modal';
+import Modal from '@roivegetto/modalreact';
 
 function Form() {
     const { addEmployee } = useContext(EmployeeContext);
@@ -138,7 +138,9 @@ function Form() {
 
             <button type="submit">Save</button>
         </form>
-        <Modal show={showModal} onClose={handleCloseModal} />
+        <Modal show={showModal} onClose={handleCloseModal}>
+            <h2>Employee Created Successfully</h2>
+        </Modal>
         </>
     );
 }

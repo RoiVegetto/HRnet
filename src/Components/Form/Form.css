@@ -8,6 +8,7 @@ form {
     align-items: center;
     background-color: #93ad18;
     border-radius: 20px;
+    min-width: 260px;
 }
 
 h2 {

@@ -1,13 +1,13 @@
 import React from 'react';
-import Footer from '../../Components/Footer/Footer';
 import TableComponent from '../../Components/Table/Table';
+import HeaderIndex from '../../Components/HeaderIndex/HeaderIndex';
 import './EmployeeList.css';
 
 function EmployeeList() {
   return (
     <>
+      <HeaderIndex logo={'Images/logoHRnet.png'} />
       <TableComponent />
-      <Footer logo={'Images/logoHRnet.png'}/>
     </>
   );
 }

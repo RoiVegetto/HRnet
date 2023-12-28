@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { useTable, usePagination, useFilters, useSortBy, useGlobalFilter } from 'react-table';
 import { EmployeeContext } from '../../Data/EmployeeContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortUp, faSortDown, faSort } from '@fortawesome/free-solid-svg-icons';
+
 import './Table.css';
 
 const TableComponent = () => {
@@ -91,22 +94,24 @@ const TableComponent = () => {
             />
             </div>
             <table {...getTableProps()}>
-                <thead>
-                    {headerGroups.map(headerGroup => (
-                        <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
-                            <th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                                {column.render('Header')}
-                                <span>
-                                    {column.isSorted
-                                        ? (column.isSortedDesc ? ' 🔽' : ' 🔼')
-                                        : ' 🔼'}
-                                </span>
-                            </th>
-                        ))}
-                    </tr>
-                    ))}
-                </thead>
+            <thead className='list'>
+    {headerGroups.map(headerGroup => (
+        <tr {...headerGroup.getHeaderGroupProps()}>
+        {headerGroup.headers.map(column => (
+            <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                {column.render('Header')}
+                <span>
+                    {column.isSorted
+                        ? (column.isSortedDesc 
+                            ? <FontAwesomeIcon icon={faSortDown} />
+                            : <FontAwesomeIcon icon={faSortUp} />)
+                        : <FontAwesomeIcon icon={faSort} />}
+                </span>
+            </th>
+        ))}
+    </tr>
+    ))}
+</thead>
                 <tbody {...getTableBodyProps()}>
                     {page.map(row => {
                         prepareRow(row);
