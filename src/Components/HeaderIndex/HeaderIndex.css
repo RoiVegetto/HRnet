@@ -2,7 +2,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #93ad18;
+    color: black;
     max-height: 180px;
 }
 
@@ -23,7 +23,7 @@ header h1 {
 
 a {
     width: 200px;
-    color: #93ad18;
+    color: black;
     position: absolute;
     right: 20px;
 }

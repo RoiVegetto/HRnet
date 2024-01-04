@@ -16,7 +16,7 @@ h2 {
 }
 
 label {
-    color:#6c8213;
+    color:black;
 }
 
 input {
@@ -64,12 +64,5 @@ select::-webkit-scrollbar {
 
 select::-webkit-scrollbar-thumb {
     background: #6c8213;
-    border-radius: 5px; 
-}
-
-button {
-    margin: 0 0 15px 0;
-    background: #6c8213;
-    border-color: #6c8213;
     border-radius: 5px; 
 }
