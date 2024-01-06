@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './HeaderIndex.css';
 
 function HeaderIndex({ logo }) {
@@ -20,5 +21,9 @@ function HeaderIndex({ logo }) {
     </header>
   );
 }
+
+HeaderIndex.propTypes = {
+  logo: PropTypes.string
+};
 
 export default HeaderIndex;

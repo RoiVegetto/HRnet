@@ -1,4 +1,5 @@
 import React, { useState, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 export const EmployeeContext = createContext();
 
@@ -26,4 +27,8 @@ export const EmployeeProvider = ({ children }) => {
             {children}
         </EmployeeContext.Provider>
     );
+};
+
+EmployeeProvider.propTypes = {
+    children: PropTypes.node.isRequired
 };
